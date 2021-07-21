@@ -1,0 +1,85 @@
+<!doctype html>
+<!-- doctype informa ao agente de usuario a versão do html que deve ser renderizada-->
+<html lang="pt-br">
+
+<head>
+    <title> pagina de exemplo estrutura basica </title>
+    <meta charset="utf-8">
+    <meta name="author" content="Valdair">
+    <meta name="description" content="descrição top">
+    <meta name="keywords" content="html5, tecnologia">
+    <style>
+        body {
+            margin-left: 50px;
+            margin-right: 50px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        .btnEnviar {
+            margin-top: 10px;
+        }
+
+        input,
+        label {
+            margin-top: 7px;
+        }
+
+        fieldset {
+            margin-top: 10px;
+        }
+
+        select {
+            margin-top: 10px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>Exemplo de formulario</h1>
+
+    <form action="#" method="POST" class="formLogin">
+        <fieldset>
+            <legend>Dados pessoais</legend>
+            <label>Email</label>
+            <input type="email" required maxlength="15">
+            <br>
+            <label>Números de filhos</label>
+            <input type="number" min="0" max="15" step="1">
+            <br>
+            <label>Nascimento:</label>
+            <input type="date" min="1900-01-01" max="2021-12-31">
+            <p>Sexo:</p>
+            <input type="radio" name="sexo" value="M">
+            <label>Masculino</label>
+            <input type="radio" name="sexo" value="F">
+            <label>Feminino</label>
+            <br>
+            <label>Estado</label>
+            <select name="Estado">
+                <option value="0">Selecione</option>
+                <option value="PR">Paraná</option>
+                <option value="SC">Santa Catarina</option>
+                <option value="SP">Rio Grande do Sul</option>
+            </select>
+
+
+        </fieldset>
+        <fieldset>
+            <legend>Área de Interesse</legend>
+            <label><input type="checkbox" value="html" name="html">HTML</label>
+            <label><input type="checkbox" value="css" name="css">CSS</label>
+            <label><input type="checkbox" value="javascript" name="javascript">Javascript</label>
+        </fieldset>
+        <fieldset>
+            <legend>Mensagem</legend>
+            <textarea style="resize: none" name="msg" id="msg" cols="30" rows="10" placeholder="informe uma mensagem..."
+                required></textarea>
+            <br>
+            <label><input type="checkbox" checked>Li e aceito</label>
+        </fieldset>
+        <input class="btnEnviar" type="submit">
+    </form>
+</body>
+
+</html>
