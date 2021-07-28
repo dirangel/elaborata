@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+  <script>
+    $(function () {
+      $("#btnSalvar").click(function () {
+        adicionarContato();
+      });
+
+      function adicionarContato() {
+        if ($.trim($('#txtNome').val()) == '') {
+          alert("Favor informar o nome");
+          $("#txtNome").focus();
+        }
+        if ($.trim($('#txtIdade').val()) == '') {
+          alert("Favor informar a idade");
+          $("#txtIdade").focus();
+        }
+        if ($.trim($('#txtTelefone').val()) == '') {
+          alert("Favor informar o telefone");
+          $("#txtTelefone").focus();
+        }
+      }
+    });
+  </script>
+
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="panel panel-info">
+        <div class="panel-heading text-center">
+          <h3><strong>Agenda de Contatos</strong></h3>
+        </div>
+        <div class="panel-body">
+          <div class="col-xs-12 col-md-6 col-lg-3">
+            <label for="txtNome">Nome</label>
+            <input id="txtNome" type="text" class="form-control">
+          </div>
+          <div class="col-xs-12 col-md-6 col-lg-3">
+            <label for="txtIdade">Idade</label>
+            <input id="txtIdade" type="text" class="form-control">
+          </div>
+          <div class="col-xs-12 col-md-6 col-lg-3">
+            <label for="txtTelefone">Telefone</label>
+            <input id="txtTelefone" type="text" class="form-control">
+          </div>
+          <div class="col-xs-12 col-md-6 cl-lg-3">
+            <br>
+            <button id="btnSalvar" class="btn btn-primary">Salvar</button>
+          </div>
+          <span class="label">Lista de agregado</span>
+
+          <table id="tblContactos" class="table table-striped table-responsive table-hover">
+            <tbody>
+              <th>Nome</th>
+              <th>Idade</th>
+              <th>Telefone</th>
+              <th>Ações</th>
+            </tbody>
+          </table>
+        </div>
+
+
+
+        <div class="panel-footer">
+          <div class="row">
+            <div class="col-xs-5 col-md-6 col-lg-5 text-left">
+              <label>Julho | 2021</label>
+            </div>
+            <div class="col-xs-7 col-md-6 col-lg-7 text-right">
+              <label>Crud(localStorage HTML5, JQuery, Bootstrap, Json)</label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+    </div>
+  </div>
+</body>
+
+</html>
